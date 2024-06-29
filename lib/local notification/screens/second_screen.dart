@@ -23,13 +23,14 @@ class _SecondScreenState extends State<SecondScreen> {
           child: Column(
             children: [
               Container(
+                padding: EdgeInsets.only(top: 40),
                 alignment: Alignment.center,
-                height: 70,
+                height: 90,
                 width: double.infinity,
-                decoration: const BoxDecoration(color: Colors.white),
+                decoration: const BoxDecoration(color: Colors.green),
                 child: const Text(
                   "Second Screen",
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold,color: Colors.white),
                 ),
               ),
               const Spacer(),

@@ -13,22 +13,40 @@ class NotificationButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 30, right: 30, top: 10, bottom: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: SizedBox(
-        height: 50,
-        width: MediaQuery.of(context).size.width,
+        height: 55,
+        width: double.infinity,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            shadowColor: Theme.of(context).shadowColor,
-            backgroundColor: Theme.of(context).primaryColor,
+            shadowColor: Colors.black.withOpacity(0.2),
+            elevation: 5,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5),
+              borderRadius: BorderRadius.circular(30),
             ),
+            padding: const EdgeInsets.all(0.0),
           ),
           onPressed: onPressed,
-          child: Text(
-            text,
-            style: const TextStyle(color: Colors.white, fontSize: 18),
+          child: Ink(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Theme.of(context).primaryColor, Theme.of(context).primaryColorDark],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Container(
+              alignment: Alignment.center,
+              child: Text(
+                text,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
           ),
         ),
       ),

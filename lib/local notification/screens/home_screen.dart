@@ -27,9 +27,9 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Local Notification'),
+          title:  Text('Local Notification',style: TextStyle(color: Colors.white)),
           centerTitle: true,
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.green,
         ),
         backgroundColor: Colors.transparent,
         body: Column(
@@ -109,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   title: 'Scheduled notification',
                   body: 'notification was fired after 5 seconds',
                   scheduled: true,
-                  interval: 30,
+                  interval: 5,
                 );
               },
               text: ' Scheduled Notification',
