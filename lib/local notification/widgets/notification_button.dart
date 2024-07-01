@@ -22,7 +22,7 @@ class NotificationButton extends StatelessWidget {
             shadowColor: Colors.black.withOpacity(0.2),
             elevation: 5,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(10),
             ),
             padding: const EdgeInsets.all(0.0),
           ),
